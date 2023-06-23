@@ -1,8 +1,16 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { PlayIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
+import { useScroll, motion, useMotionValueEvent } from "framer-motion";
 
 function Hero() {
+  const { scrollYProgress } = useScroll();
+  const [scrollProgress, setscrollProgress] = useState(0);
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    setscrollProgress(latest);
+  });
+
   return (
     <main className="min-h-screen w-full items-center justify-start flex flex-col pt-12">
       <span className="w-full items-center justify-center flex flex-col space-y-2 text-[#01213A]">
@@ -57,6 +65,17 @@ function Hero() {
           </span>
         </button>
       </span>
+      <motion.img
+        initial={{ scale: 1 }}
+        style={{
+          scale: 1 + scrollProgress * 0.2,
+        }}
+        src="/hero.jpg"
+        width={1000}
+        height={800}
+        alt="hero-img"
+        className="mt-12 object-cover object-center"
+      />
     </main>
   );
 }
