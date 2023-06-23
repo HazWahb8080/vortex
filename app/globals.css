@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@layer components {
+  .banner-bg {
+    background: linear-gradient(
+      270deg,
+      rgb(61, 155, 252) 0%,
+      rgb(123, 64, 228) 25.15923566878981%,
+      rgb(245, 58, 139) 50%,
+      rgb(238, 112, 74) 74.8407643312102%,
+      #ddd24c 100%
+    );
+  }
+  .smooth {
+    @apply transition-all ease-in-out duration-300;
+  }
+}
