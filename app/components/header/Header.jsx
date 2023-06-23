@@ -6,7 +6,7 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline";
 function Header() {
   const [activeNavLink, setActiveNavLink] = useState(navLinks[0]);
   return (
-    <header className="w-full pt-2 pb-4 items-center justify-between flex border-b border-b-black/5">
+    <header className="w-full lg:w-[85%] pb-2 pt-4 items-center justify-between flex border-b border-b-black/5">
       <Image
         height={30}
         width={100}

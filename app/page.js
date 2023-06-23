@@ -1,4 +1,5 @@
 import Header from "./components/header/Header";
+import Hero from "./components/hero/Hero";
 import TopBanner from "./components/topBanner/TopBanner";
 
 export default function Home() {
@@ -10,9 +11,10 @@ export default function Home() {
       <TopBanner />
       <section
         className="pb-12 -mt-[8vh] rounded-t-[50px] bg-white min-h-screen 
-      w-full items-center justify-start flex flex-col p-6"
+      w-full items-center justify-start flex flex-col px-6"
       >
         <Header />
+        <Hero />
       </section>
     </main>
   );
