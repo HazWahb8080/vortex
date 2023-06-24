@@ -19,8 +19,8 @@ function Header() {
           <p
             onClick={() => setActiveNavLink(link)}
             key={link}
-            className={`text-sm font-semibold text-black/60 hover:text-black smooth cursor-pointer ${
-              activeNavLink === link && "text-black"
+            className={`text-sm font-semibold  hover:text-black smooth cursor-pointer ${
+              activeNavLink === link ? "text-black" : "text-black/60"
             }`}
           >
             {link}
