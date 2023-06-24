@@ -69,7 +69,7 @@ function Hero() {
         <motion.img
           initial={{ scale: 1 }}
           style={{
-            scale: 1 + scrollProgress * 0.2,
+            scale: 1 + scrollProgress * 0.5,
           }}
           src="/hero.jpg"
           width={1000}

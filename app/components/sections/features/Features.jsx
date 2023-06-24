@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function Features() {
   return (
-    <main className="w-full px-6 items-center justify-center flex py-24">
+    <main className="w-full px-6 md:px-12 items-center justify-center flex py-24">
       <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         {FeaturesData.map((feature) => (
           <FeatureItem key={feature.id} feature={feature} />
