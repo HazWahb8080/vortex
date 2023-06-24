@@ -20,17 +20,19 @@ function FeaturesTabs() {
         custom block to re-use on other pages.
       </p>
       {/* tabs */}
-      <div className="flex-col-1 md:flex items-center justify-between md:px-12 mt-12">
-        <span className="w-[600px] h-[600px] items-center justify-center flex">
-          <Image
-            src={activeTab.image}
-            alt={activeTab.title}
-            height={600}
-            width={600}
-          />
-        </span>
+      <div className="flex-col-1 lg:flex items-center justify-between lg:px-12 mt-12">
+        <div className="w-full items-center justify-center flex">
+          <span className="w-[600px] h-[600px] items-center justify-center flex">
+            <Image
+              src={activeTab.image}
+              alt={activeTab.title}
+              height={600}
+              width={600}
+            />
+          </span>
+        </div>
 
-        <div className="flex flex-col items-end justify-end h-full">
+        <div className="flex flex-col lg:items-end lg:justify-end h-full">
           {tabsData.map((tab) => (
             <Tab
               tab={tab}
@@ -51,7 +53,7 @@ export const Tab = ({ tab, active, setActiveTab }) => {
   return (
     <div
       onClick={() => setActiveTab(tab)}
-      className={`rounded-lg px-2 py-2 items-center justify-center flex flex-col w-[50%] smooth my-2 ${
+      className={`rounded-lg px-2 py-2 items-center justify-center flex flex-col w-[70%] smooth my-2 ${
         active === tab.id
           ? "bg-white"
           : "bg-transparent cursor-pointer hover:bg-white"
