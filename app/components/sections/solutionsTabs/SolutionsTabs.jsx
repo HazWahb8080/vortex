@@ -40,7 +40,7 @@ function SolutionsTabs() {
             tab={tab}
             key={tab.id}
             setActiveTab={setActiveTab}
-            activeTab={activeTab}
+            activeTab={activeTab.id}
           />
         ))}
       </div>
@@ -65,8 +65,8 @@ export const Tab = ({ tab, setActiveTab, activeTab }) => {
       <div className="relative items-start justify-start flex flex-col h-3 rounded-full w-full">
         <span className="h-1 rounded-full w-full bg-gray-100 absolute" />
         <span
-          className={`h-1 rounded-full w-full bg-black/90 absolute smooth ${
-            activeTab === tab ? "w-[100%]" : "w-[0%]"
+          className={`h-1 rounded-full bg-black/90 absolute smooth ${
+            activeTab === tab.id ? "w-[100%]" : "w-[0%]"
           }`}
         />
       </div>
