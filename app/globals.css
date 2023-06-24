@@ -21,6 +21,6 @@
     @apply transition-all ease-in-out duration-300;
   }
   .marquee__item {
-    @apply mx-12 object-center object-contain;
+    @apply mx-20 object-center object-contain;
   }
 }
