@@ -24,9 +24,9 @@ function Hero() {
           </b>
         </h2>
       </span>
-      <h3 className="w-full lg:w-[50%] text-center text-gray-500 mt-8 text-lg">
-        No more complex codes or boring designs. Creating an <br /> attractive
-        and functional site has never been easier.
+      <h3 className="w-full lg:w-[45%] text-center text-gray-500 mt-8 text-lg">
+        No more complex codes or boring designs. Creating an attractive and
+        functional site has never been easier.
       </h3>
       <span className="w-full z-50 lg:flex items-center justify-center flex-col-1 lg:space-x-12 space-y-4 lg:space-y-0 mt-6">
         <button
