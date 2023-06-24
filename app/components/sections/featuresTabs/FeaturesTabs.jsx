@@ -3,7 +3,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { tabsData } from "./data";
-import { motion } from "framer-motion";
 
 function FeaturesTabs() {
   const [activeTab, setActiveTab] = useState(tabsData[0]);
@@ -22,7 +21,7 @@ function FeaturesTabs() {
       {/* tabs */}
       <div className="flex-col-1 lg:flex items-center justify-between lg:px-12 mt-12">
         <div className="w-full items-center justify-center flex">
-          <span className="w-[600px] h-[600px] items-center justify-center flex">
+          <span className="lg:w-[600px] lg:h-[600px] items-center justify-center flex">
             <Image
               src={activeTab.image}
               alt={activeTab.title}
