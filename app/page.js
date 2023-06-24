@@ -2,6 +2,7 @@ import Header from "./components/header/Header";
 import Hero from "./components/hero/Hero";
 import Clients from "./components/sections/clients/Clients";
 import Features from "./components/sections/features/Features";
+import FeaturesTabs from "./components/sections/featuresTabs/FeaturesTabs";
 import TopBanner from "./components/topBanner/TopBanner";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
         <Hero />
         <Clients />
         <Features />
+        <FeaturesTabs />
       </section>
     </main>
   );
