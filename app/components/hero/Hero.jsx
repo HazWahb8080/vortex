@@ -14,10 +14,10 @@ function Hero() {
   return (
     <main className="min-h-screen w-full items-center justify-start flex flex-col pt-12">
       <span className="w-full z-50 items-center justify-center flex flex-col space-y-2 text-[#01213A]">
-        <h2 className="text-6xl lg:text-[70px] font-bold tracking-tight">
+        <h2 className="text-6xl lg:text-[70px] font-semibold tracking-tight">
           Track your daily
         </h2>
-        <h2 className="text-6xl lg:text-[70px] font-bold tracking-tight">
+        <h2 className="text-6xl lg:text-[70px] font-semibold tracking-tight">
           work
           <b className="banner-bg text-transparent bg-clip-text p-2">
             activity

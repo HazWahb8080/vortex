@@ -11,7 +11,7 @@ function FeaturesTabs() {
       className="w-full bg-[#F4F7FF] items-center justify-start
      flex flex-col min-h-[50vh] py-12 px-6 my-12 smooth"
     >
-      <h1 className="text-[#01213A] pt-10 font-bold text-2xl md:text-4xl ">
+      <h1 className="text-[#01213A] pt-10 font-semibold text-2xl md:text-4xl ">
         Automate your notifications.
       </h1>
       <p className="w-full md:w-[40%] text-center text-black/40 font-semibold mt-5">

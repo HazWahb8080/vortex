@@ -26,7 +26,7 @@ export const FeatureItem = ({ feature }) => {
         width={150}
         className="object-center object-cover mb-4"
       />
-      <h1 className="text-[#01213A] text-lg font-bold">{feature.title}</h1>
+      <h1 className="text-[#01213A] text-lg font-semibold">{feature.title}</h1>
       <p className="text-sm font-semibold text-black/60 text-center leading-5">
         {feature.desc}
       </p>

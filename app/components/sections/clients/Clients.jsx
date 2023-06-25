@@ -5,7 +5,7 @@ import Marquee from "react-fast-marquee";
 function Clients() {
   return (
     <main className="w-full items-center justify-center flex flex-col mt-36">
-      <h2 className="mb-12 font-bold text-sm text-[#043C39]">
+      <h2 className="mb-12 font-semibold text-sm text-[#043C39]">
         Transforming the Remote Working
       </h2>
       <Marquee className="w-full space-x-20 py-2">

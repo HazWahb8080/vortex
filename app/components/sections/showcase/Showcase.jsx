@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Autoplay } from "swiper";
 import "swiper/css";
 import { swiperData } from "./data";
-import Image from "next/image";
 
 function Showcase() {
   return (
@@ -31,6 +30,7 @@ function Showcase() {
               alt={"swiper-slide-image"}
               key={slide}
               className="object-cover object-center h-full w-full"
+              loading="lazy"
             />
           </SwiperSlide>
         ))}

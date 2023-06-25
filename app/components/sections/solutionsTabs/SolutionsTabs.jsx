@@ -16,7 +16,7 @@ function SolutionsTabs() {
             </p>
             <p className="text-xs font-semibold capitalize">TIME SAVING</p>
           </span>
-          <h1 className="font-bold text-2xl md:text-5xl w-full md:w-2/3 pb-8">
+          <h1 className="font-semibold text-2xl md:text-5xl w-full md:w-2/3 pb-8">
             {activeTab.title}
           </h1>
           <p className="w-full md:w-[80%] text-black/50 font-semibold leading-6">
@@ -60,7 +60,7 @@ export const Tab = ({ tab, setActiveTab, activeTab }) => {
         <span className="rounded-lg bg-gray-100 p-6">
           <>{tab.icon}</>
         </span>
-        <h1 className="self-center w-2/3 text-xl font-bold">{tab.title}</h1>
+        <h1 className="self-center w-2/3 text-xl font-semibold">{tab.title}</h1>
       </div>
       <div className="relative items-start justify-start flex flex-col h-3 rounded-full w-full">
         <span className="h-1 rounded-full w-full bg-gray-100 absolute" />
