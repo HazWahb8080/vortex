@@ -6,6 +6,7 @@ import FeaturesTabs from "./components/sections/featuresTabs/FeaturesTabs";
 import Process from "./components/sections/process/Process";
 import Showcase from "./components/sections/showcase/Showcase";
 import SolutionsTabs from "./components/sections/solutionsTabs/SolutionsTabs";
+import Testimonials from "./components/sections/testimonials/Testimonials";
 import TopBanner from "./components/topBanner/TopBanner";
 
 export default function Home() {
@@ -17,7 +18,7 @@ export default function Home() {
       <TopBanner />
       <section
         className="pb-12 -mt-[8vh] rounded-t-[50px] bg-white min-h-screen 
-      w-full items-center justify-start flex flex-col px-6"
+      w-full items-center justify-start flex flex-col"
       >
         <Header />
         <Hero />
@@ -27,6 +28,7 @@ export default function Home() {
         <SolutionsTabs />
         <Showcase />
         <Process />
+        <Testimonials />
       </section>
     </main>
   );
