@@ -3,6 +3,7 @@ import Hero from "./components/hero/Hero";
 import Clients from "./components/sections/clients/Clients";
 import Features from "./components/sections/features/Features";
 import FeaturesTabs from "./components/sections/featuresTabs/FeaturesTabs";
+import Process from "./components/sections/process/Process";
 import Showcase from "./components/sections/showcase/Showcase";
 import SolutionsTabs from "./components/sections/solutionsTabs/SolutionsTabs";
 import TopBanner from "./components/topBanner/TopBanner";
@@ -25,6 +26,7 @@ export default function Home() {
         <FeaturesTabs />
         <SolutionsTabs />
         <Showcase />
+        <Process />
       </section>
     </main>
   );
