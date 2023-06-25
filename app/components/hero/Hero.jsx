@@ -12,7 +12,7 @@ function Hero() {
   });
 
   return (
-    <main className="min-h-screen w-full items-center justify-start flex flex-col pt-12">
+    <main className="mb-24 min-h-screen w-full items-center justify-start flex flex-col pt-12">
       <span className="w-full z-50 items-center justify-center flex flex-col space-y-2 text-[#01213A]">
         <h2 className="text-6xl lg:text-[70px] font-semibold tracking-tight">
           Track your daily

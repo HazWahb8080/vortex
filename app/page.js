@@ -2,6 +2,7 @@
 import Header from "./components/header/Header";
 import Hero from "./components/hero/Hero";
 import Clients from "./components/sections/clients/Clients";
+import { FAQs } from "./components/sections/faqs/FAQs";
 import Features from "./components/sections/features/Features";
 import FeaturesTabs from "./components/sections/featuresTabs/FeaturesTabs";
 import { Pricing } from "./components/sections/pricing/Pricing";
@@ -32,6 +33,8 @@ function Home() {
         <Process />
         <Testimonials />
         <Pricing />
+        <FAQs />
+        <Clients />
       </section>
     </main>
   );
