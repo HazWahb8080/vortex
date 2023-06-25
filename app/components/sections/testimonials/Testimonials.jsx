@@ -22,7 +22,7 @@ function Testimonials() {
           </p>
           <p className="text-xs font-semibold capitalize">TIME SAVING</p>
         </span>
-        <h1 className="font-bold text-2xl md:text-5xl xl:text-6xl w-full md:w-2/3 xl:w-full pb-8">
+        <h1 className="font-bold text-2xl md:text-5xl w-full md:w-2/3 xl:w-full pb-8">
           Trusted by global companies.
         </h1>
         <p className="w-full md:w-[80%] text-black/50 font-semibold leading-7 text-lg">
