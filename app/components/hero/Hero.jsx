@@ -28,7 +28,7 @@ function Hero() {
         No more complex codes or boring designs. Creating an attractive and
         functional site has never been easier.
       </h3>
-      <span className="w-full z-50 lg:flex items-center justify-center flex-col-1 lg:space-x-12 space-y-4 lg:space-y-0 mt-6">
+      <span className="w-full z-50 flex items-center justify-center space-x-12 mt-6">
         <button
           className="bg-[#0044EB] px-6 py-3 rounded-3xl text-white
          overflow-hidden flex smooth hover:bg-black group hover:shadow-2xl hover:shadow-black/80

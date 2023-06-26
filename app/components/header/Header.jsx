@@ -33,7 +33,10 @@ function Header() {
          justify-center rounded-3xl py-4 smooth hover:bg-black hover:text-white hover:shadow-xl group  "
         >
           <p className="text-xs">Join Vortex</p>
-          <ArrowRightIcon className="h-4 w-4 group-hover:translate-x-1 smooth group-hover:stroke-white" />
+          <ArrowRightIcon
+            className="h-4 w-4 group-hover:translate-x-1 smooth
+           group-hover:stroke-white"
+          />
         </button>
       </span>
     </header>

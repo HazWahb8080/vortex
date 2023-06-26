@@ -6,7 +6,7 @@ import { Data } from "./data";
 import classNames from "classnames";
 import Image from "next/image";
 
-export function FAQs() {
+export default function FAQs() {
   const [activeTab, setActiveTab] = useState(0);
   return (
     <main
@@ -14,11 +14,11 @@ export function FAQs() {
     w-full items-start justify-start pt-36 pb-20 px-6 md:px-12 lg:px-20 font-inter "
     >
       <div className="items-start justify-start flex flex-col w-full ">
-        <span className="w-full justify-between items-center flex">
+        <span className="w-full justify-between items-center flex-col-1 md:flex">
           <h1 className="text-[#0c114b] text-4xl lg:text-5xl font-bold self-center">
             Frequently Asked Questions.
           </h1>
-          <span className="flex space-x-3 items-center justify-center self-center">
+          <span className="flex space-x-3 items-end justify-end self-center">
             <p> support team</p>
             <Image
               src="/images/faqs/team.jpg"

@@ -1,12 +1,13 @@
 "use client";
 import Banner from "./components/banner/Banner";
+import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import Hero from "./components/hero/Hero";
 import Clients from "./components/sections/clients/Clients";
-import { FAQs } from "./components/sections/faqs/FAQs";
+import FAQs from "./components/sections/faqs/FAQs";
 import Features from "./components/sections/features/Features";
 import FeaturesTabs from "./components/sections/featuresTabs/FeaturesTabs";
-import { Pricing } from "./components/sections/pricing/Pricing";
+import Pricing from "./components/sections/pricing/Pricing";
 import Process from "./components/sections/process/Process";
 import Showcase from "./components/sections/showcase/Showcase";
 import SolutionsTabs from "./components/sections/solutionsTabs/SolutionsTabs";
@@ -21,7 +22,7 @@ function Home() {
     >
       <TopBanner />
       <section
-        className="pb-12 -mt-[8vh] rounded-t-[50px] bg-white min-h-screen 
+        className="pb-12 -mt-[8vh] lg:rounded-t-[50px] bg-white min-h-screen 
       w-full items-center justify-start flex flex-col"
       >
         <Header />
@@ -37,6 +38,7 @@ function Home() {
         <FAQs />
         <Clients />
         <Banner />
+        <Footer />
       </section>
     </main>
   );

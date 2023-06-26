@@ -5,7 +5,7 @@ import { pricingData } from "./data";
 import { CheckIcon } from "@heroicons/react/24/outline";
 import classNames from "classnames";
 
-export function Pricing() {
+export default function Pricing() {
   const [annually, setAnnually] = useState(true);
   return (
     <main
@@ -48,7 +48,7 @@ export function Pricing() {
       {/* pricingData */}
       <div
         role="list"
-        className="grid grid-cols-1 lg:grid-cols-7 w-full mt-24 -gap-10"
+        className="grid grid-cols-1 lg:grid-cols-7 w-full mt-24 md:-gap-10 gap-10"
       >
         {pricingData.map((plan) => (
           <Plan key={plan.id} plan={plan} annually={annually} />
@@ -63,8 +63,8 @@ const Plan = ({ plan, annually }) => {
       role="listitem"
       className={classNames(
         plan.title === "Popular"
-          ? "from-[#030343] to-black bg-gradient-to-b text-white shadow-2xl shadow-black col-span-3"
-          : "bg-[#FFFFFF] text-[#18163E] border col-span-2",
+          ? "from-[#030343] to-black bg-gradient-to-b text-white shadow-2xl shadow-black lg:col-span-3"
+          : "bg-[#FFFFFF] text-[#18163E] border lg:col-span-2",
         "py-12 w-full rounded-sm items-center flex flex-col h-full"
       )}
     >

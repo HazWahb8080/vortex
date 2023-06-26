@@ -5,7 +5,7 @@ import { stepsData } from "./data";
 
 function Process() {
   return (
-    <main className="w-full px-6 lg:px-16">
+    <main className="w-full px-6 lg:px-16 mt-24">
       <div className="w-full items-center justify-center flex-col-1 lg:flex">
         <div className="w-full items-start justify-start flex flex-col h-full lg:mb-0 mb-12">
           {/* badge */}
@@ -18,7 +18,7 @@ function Process() {
           <h1 className="font-bold text-2xl md:text-5xl xl:text-6xl w-full md:w-2/3 xl:w-full pb-8">
             Track your daily activity.
           </h1>
-          <p className="w-full md:w-[80%] text-black/50 font-semibold leading-7 text-lg">
+          <p className="w-full md:w-[80%] text-black/50 font-semibold leading-7 text-sm md:text-lg">
             The latest design trends meet hand-crafted templates in Hub
             Collection. Use pre-built sections to speed up your design process.
           </p>
@@ -36,7 +36,7 @@ function Process() {
       </div>
       <div
         className="w-full items-center justify-center 
-      md:flex flex-col-1 space-x-y-4 md:space-y-0 md:space-x-6 space-x-0 -mt-12"
+      md:flex flex-col-1 space-y-4 md:space-y-0 md:space-x-6 space-x-0 lg:-mt-12 mt-12"
       >
         {stepsData.map((step) => (
           <div
