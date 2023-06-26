@@ -10,7 +10,7 @@ export function Pricing() {
   return (
     <main
       className="w-full min-h-screen items-center justify-start 
-    flex flex-col pb-12 pt-24 px-12 bg-white"
+    flex flex-col pb-12 pt-24 px-12 lg:px-20 bg-white"
     >
       <h1 className=" text-2xl lg:text-5xl text-[#181B31] font-bold">
         Simple Pricing

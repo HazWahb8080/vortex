@@ -41,7 +41,7 @@ export function FAQs() {
                 title={
                   <h1
                     className={classNames(
-                      activeTab === i ? "text-black" : "text-black/90",
+                      activeTab === i ? "text-black" : "text-black/70",
                       "font-semibold text-xl smooth"
                     )}
                   >
