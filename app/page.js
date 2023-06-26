@@ -1,4 +1,5 @@
 "use client";
+import Banner from "./components/banner/Banner";
 import Header from "./components/header/Header";
 import Hero from "./components/hero/Hero";
 import Clients from "./components/sections/clients/Clients";
@@ -35,6 +36,7 @@ function Home() {
         <Pricing />
         <FAQs />
         <Clients />
+        <Banner />
       </section>
     </main>
   );
