@@ -13,7 +13,7 @@ function Header() {
         width={100}
         alt="vortex-logo"
         className="object-cover object-center"
-        src="/vortex.png"
+        src="/logo.png"
       />
       <div className="w-full space-x-6 md:space-x-8 lg:space-x-24 hidden lg:flex items-center justify-center">
         {navLinks.map((link) => (
