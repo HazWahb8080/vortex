@@ -1,25 +1,40 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Switch } from "@nextui-org/react";
 import { pricingData } from "./data";
 import { CheckIcon } from "@heroicons/react/24/outline";
 import classNames from "classnames";
+import { useInView, motion } from "framer-motion";
+import { childVariants, staggerVariants } from "@/app/utils/utils";
 
 export default function Pricing() {
   const [annually, setAnnually] = useState(true);
+  // Animation
+  const ref = useRef(null);
+  const isInView = useInView(ref);
   return (
     <main
       className="w-full min-h-screen items-center justify-start 
     flex flex-col pb-12 pt-24 px-12 lg:px-20 bg-white"
+      variants={staggerVariants}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
     >
-      <h1 className=" text-2xl lg:text-5xl text-[#181B31] font-bold">
+      <motion.h1
+        variants={childVariants}
+        className=" text-2xl lg:text-5xl text-[#181B31] font-bold"
+      >
         Simple Pricing
-      </h1>
-      <p className="text-[#86888D] text-lg lg:w-[35%] text-center mt-6 font-medium">
+      </motion.h1>
+      <motion.p
+        variants={childVariants}
+        className="text-[#86888D] text-lg lg:w-[35%] text-center mt-6 font-medium"
+      >
         Explore flexible solutions for your needs. Free plan is available for
         all existing customers.
-      </p>
-      <span
+      </motion.p>
+      <motion.span
+        variants={childVariants}
         role="group"
         className="lg:w-[50%] items-center justify-center flex space-x-4 mt-8"
       >
@@ -44,22 +59,27 @@ export default function Pricing() {
         >
           Annually - save 30%
         </p>
-      </span>
+      </motion.span>
       {/* pricingData */}
-      <div
+      <motion.div
+        ref={ref}
+        variants={staggerVariants}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
         role="list"
         className="grid grid-cols-1 lg:grid-cols-7 w-full mt-24 md:-gap-10 gap-10"
       >
         {pricingData.map((plan) => (
           <Plan key={plan.id} plan={plan} annually={annually} />
         ))}
-      </div>
+      </motion.div>
     </main>
   );
 }
 const Plan = ({ plan, annually }) => {
   return (
-    <div
+    <motion.div
+      variants={childVariants}
       role="listitem"
       className={classNames(
         plan.title === "Popular"
@@ -114,6 +134,6 @@ const Plan = ({ plan, annually }) => {
           Get your 7 days trial
         </p>
       </span>
-    </div>
+    </motion.div>
   );
 };
