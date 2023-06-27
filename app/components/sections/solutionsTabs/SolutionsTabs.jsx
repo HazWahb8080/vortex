@@ -1,40 +1,76 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { SolutionsData } from "./data";
 import Image from "next/image";
+import { useInView, motion } from "framer-motion";
+import { childVariants, staggerVariants } from "@/app/utils/utils";
 
 function SolutionsTabs() {
   const [activeTab, setActiveTab] = useState(SolutionsData[0]);
+  // Animation
+  const ref = useRef(null);
+  const isInView = useInView(ref);
   return (
-    <main className="w-full items-start justify-start flex flex-col px-4 lg:px-10 py-12 ">
-      <div className="w-full items-center justify-center flex-col-1 lg:flex">
-        <div className="w-full items-start justify-start flex flex-col h-full lg:mb-0 mb-12">
+    <main
+      ref={ref}
+      className="w-full items-start justify-start flex flex-col px-4 lg:px-10 py-12 "
+    >
+      <motion.div
+        variants={staggerVariants}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        className="w-full items-center justify-center flex-col-1 lg:flex"
+      >
+        <motion.div className="w-full items-start justify-start flex flex-col h-full lg:mb-0 mb-12">
           {/* badge */}
-          <span className="py-6 flex space-x-1 items-center justify-center mb-2">
-            <p className="px-2 py-[2px] rounded-full bg-black text-white text-xs font-semibold capitalize">
+          <motion.span className="py-6 flex space-x-1 items-center justify-center mb-2">
+            <p
+              variants={childVariants}
+              className="px-2 py-[2px] rounded-full bg-black text-white text-xs font-semibold capitalize"
+            >
               vortex solutions
             </p>
-            <p className="text-xs font-semibold capitalize">TIME SAVING</p>
-          </span>
-          <h1 className="font-semibold text-2xl md:text-5xl w-full md:w-2/3 pb-8">
+            <p
+              variants={childVariants}
+              className="text-xs font-semibold capitalize"
+            >
+              TIME SAVING
+            </p>
+          </motion.span>
+          <motion.h1
+            variants={childVariants}
+            className="font-semibold text-2xl md:text-5xl w-full md:w-2/3 pb-8"
+          >
             {activeTab.title}
-          </h1>
-          <p className="w-full md:w-[80%] text-black/50 font-semibold leading-6">
+          </motion.h1>
+          <motion.p
+            variants={childVariants}
+            className="w-full md:w-[80%] text-black/50 font-semibold leading-6"
+          >
             {activeTab.desc}
-          </p>
-        </div>
-        <div className="w-full items-center justify-center flex">
-          <span className="md:w-[500px] md:h-[500px] items-center justify-center flex">
+          </motion.p>
+        </motion.div>
+        <motion.div
+          variants={childVariants}
+          className="w-full items-center justify-center flex"
+        >
+          <motion.span
+            variants={childVariants}
+            className="md:w-[500px] md:h-[500px] items-center justify-center flex"
+          >
             <Image
               src={activeTab.image}
               alt={activeTab.title}
               height={500}
               width={500}
             />
-          </span>
-        </div>
-      </div>
-      <div className="lg:flex flex-col-1 items-center justify-between w-full space-y-8 lg:space-y-0 lg:space-x-8 mt-12 lg:mt-0">
+          </motion.span>
+        </motion.div>
+      </motion.div>
+      <motion.div
+        variants={childVariants}
+        className="lg:flex flex-col-1 items-center justify-between w-full space-y-8 lg:space-y-0 lg:space-x-8 mt-12 lg:mt-0"
+      >
         {SolutionsData.map((tab) => (
           <Tab
             tab={tab}
@@ -43,7 +79,7 @@ function SolutionsTabs() {
             activeTab={activeTab.id}
           />
         ))}
-      </div>
+      </motion.div>
     </main>
   );
 }

@@ -1,6 +1,8 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
 import { FeaturesData } from "./data";
-import Image from "next/image";
+import { motion, useInView } from "framer-motion";
+import { childVariants, staggerVariants } from "@/app/utils/utils";
 
 function Features() {
   return (
@@ -17,19 +19,37 @@ function Features() {
 export default Features;
 
 export const FeatureItem = ({ feature }) => {
+  const ref = useRef(null);
+  const inView = useInView(ref);
+
   return (
-    <div className="flex flex-col items-center justify-end space-y-4">
-      <Image
+    <motion.div
+      ref={ref}
+      className="flex flex-col items-center justify-end space-y-4"
+      variants={staggerVariants}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+    >
+      <motion.img
         src={feature.image}
         alt={feature.title}
         height={100}
         width={150}
         className="object-center object-cover mb-4"
+        variants={childVariants}
       />
-      <h1 className="text-[#01213A] text-lg font-semibold">{feature.title}</h1>
-      <p className="text-sm font-semibold text-black/60 text-center leading-5">
+      <motion.h1
+        variants={childVariants}
+        className="text-[#01213A] text-lg font-semibold"
+      >
+        {feature.title}
+      </motion.h1>
+      <motion.p
+        variants={childVariants}
+        className="text-sm font-semibold text-black/60 text-center leading-5"
+      >
         {feature.desc}
-      </p>
-    </div>
+      </motion.p>
+    </motion.div>
   );
 };

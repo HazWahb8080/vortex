@@ -1,23 +1,39 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { tabsData } from "./data";
+import { useInView, motion } from "framer-motion";
+import { childVariants, staggerVariants } from "@/app/utils/utils";
 
 function FeaturesTabs() {
   const [activeTab, setActiveTab] = useState(tabsData[0]);
+  // Animation
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
   return (
-    <main
+    <motion.main
+      ref={ref}
       className="w-full bg-[#F4F7FF] items-center justify-start
      flex flex-col min-h-[50vh] py-12 px-6 my-12 smooth"
+      variants={staggerVariants}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
     >
-      <h1 className="text-[#01213A] pt-10 font-semibold text-2xl md:text-4xl ">
+      <motion.h1
+        variants={childVariants}
+        className="text-[#01213A] pt-10 font-semibold text-2xl md:text-4xl "
+      >
         Automate your notifications.
-      </h1>
-      <p className="w-full md:w-[40%] text-center text-black/40 font-semibold mt-5">
+      </motion.h1>
+      <motion.p
+        variants={childVariants}
+        className="w-full md:w-[40%] text-center text-black/40 font-semibold mt-5"
+      >
         Import a pre-built section block with a single click or save your own
         custom block to re-use on other pages.
-      </p>
+      </motion.p>
       {/* tabs */}
       <div className="flex-col-1 lg:flex items-center justify-between lg:px-12 mt-12">
         <div className="w-full items-center justify-center flex">
@@ -42,7 +58,7 @@ function FeaturesTabs() {
           ))}
         </div>
       </div>
-    </main>
+    </motion.main>
   );
 }
 
